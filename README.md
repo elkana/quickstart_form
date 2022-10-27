@@ -1,6 +1,20 @@
 # quickstart_form
 
-A new Flutter project.
+
+<div align="center">
+
+<h4 align="center">Sample Form &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Home Screen &nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Side Drawer</h4>
+<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/bank.jpg"/>
+<img height=360 width=240 style="margin: 10px;" src="./lib/pages/forms/sample/ss_form_sample.jpg"/>
+</div>
+
+A quickstart Flutter project, especially for Forms.
+It is mandatory to use GetX, VelocityX, DotEnv & FormBuilder to make your life younger.
+
+You might want to integrate with following quickstart:
+- Approval : When forms of onboarding with ID Card included, the photo will be uploaded into server, and server might need to approve manually. 
+
+
 
 ## Getting Started
 

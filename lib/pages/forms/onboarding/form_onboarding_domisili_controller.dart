@@ -2,15 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:quickstart_form/utils/commons.dart';
 
-class FormOnBoardingController extends GetxController {
-  static FormOnBoardingController instance = Get.find();
+class FormOnBoardingDomisiliController extends GetxController {
+  static FormOnBoardingDomisiliController instance = Get.find();
   final formKey = GlobalKey<FormBuilderState>();
-  var ageHasError = false.obs;
-  var genderHasError = false.obs;
-  var genderOptions = ['Male', 'Female', 'Other'];
+  var propinsiHasError = false.obs;
+  var kotaHasError = false.obs;
+  var kecamatanHasError = false.obs;
+  var kelurahanHasError = false.obs;
+  var propinsiOptions = ['DKI Jakarta'].obs;
+  var kotaOptions = ['BCA', 'Blu BCA', 'Mandiri'].obs;
+  var kecamatanOptions = ['BCA', 'Blu BCA', 'Mandiri'].obs;
+  var kelurahanOptions = ['BCA', 'Blu BCA', 'Mandiri'].obs;
 
-  void formOnChanged(dynamic val) => debugPrint(val.toString());
+  void formOnChanged(dynamic val) => log(val.toString());
 
   @override
   void onInit() {

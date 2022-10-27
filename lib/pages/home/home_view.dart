@@ -24,8 +24,20 @@ class HomeView extends StatelessWidget {
                 onPressed: () => Get.toNamed(Routes.formSample),
                 icon: const Icon(Icons.format_list_bulleted_rounded)),
             ElevatedButton.icon(
-                label: const Text('Forms OnBoarding'),
-                onPressed: () => Get.toNamed(Routes.formOnboarding),
+                label: const Text('Forms OnBoarding Personal'),
+                onPressed: () => Get.toNamed(Routes.formOnboardingPersonal),
+                icon: const Icon(Icons.format_list_bulleted_rounded)),
+            ElevatedButton.icon(
+                label: const Text('Forms OnBoarding Job'),
+                onPressed: () => Get.toNamed(Routes.formOnboardingJob),
+                icon: const Icon(Icons.format_list_bulleted_rounded)),
+            ElevatedButton.icon(
+                label: const Text('Forms OnBoarding Bank'),
+                onPressed: () => Get.toNamed(Routes.formOnboardingBank),
+                icon: const Icon(Icons.format_list_bulleted_rounded)),
+            ElevatedButton.icon(
+                label: const Text('Forms OnBoarding Domisili'),
+                onPressed: () => Get.toNamed(Routes.formOnboardingDomisili),
                 icon: const Icon(Icons.format_list_bulleted_rounded)),
             ElevatedButton.icon(
                 label: const Text('Forms Login'),

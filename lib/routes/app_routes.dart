@@ -6,5 +6,8 @@ abstract class Routes {
   static const formSignUp = '/signup';
   static const formResetPwd = '/resetpwd';
   static const formSample = '/form_sample';
-  static const formOnboarding = '/form_onboarding';
+  static const formOnboardingPersonal = '/form_onboarding_personal';
+  static const formOnboardingJob = '/form_onboarding_job';
+  static const formOnboardingBank = '/form_onboarding_bank';
+  static const formOnboardingDomisili = '/form_onboarding_domisili';
 }
