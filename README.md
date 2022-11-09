@@ -14,6 +14,7 @@ It is mandatory to use GetX, VelocityX, DotEnv & FormBuilder to make your life y
 You might want to integrate with following quickstart:
 - Approval : When forms of onboarding with ID Card included, the photo will be uploaded into server, and server might need to approved manually. Firebase/Supabase needed.
 - OCR: https://github.com/elkana/sample_ocr_licenseplate.git
+- QRCode: https://github.com/elkana/sample_qrcode.git
 - https://github.com/elkana/quickstart_getx_hive.git
 - https://github.com/elkana/firebase_login_getx.git
 
