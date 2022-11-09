@@ -4,11 +4,11 @@
 <div align="center">
 
 <h4 align="center">Informasi Data Bank &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Alamat Domisili &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Info Pekerjaan &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Personal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Form Sample</h4>
-<a href="/pages/forms/onboarding/form_onboarding_bank_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/bank.jpg"/></a>
-<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/alamat_domisili.jpg"/>
-<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/pekerjaan.jpg"/>
-<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/personal.jpg"/>
-<img height=360 width=240 style="margin: 10px;" src="./lib/pages/forms/sample/ss_form_sample.jpg"/>
+<a href="/lib/pages/forms/onboarding/form_onboarding_bank_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/bank.jpg"/></a>
+<a href="/lib/pages/forms/onboarding/form_onboarding_domisili_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/alamat_domisili.jpg"/></a>
+<a href="/lib/pages/forms/onboarding/form_onboarding_job_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/pekerjaan.jpg"/></a>
+<a href="/lib/pages/forms/onboarding/form_onboarding_personal_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/personal.jpg"/></a>
+<a href="/lib/pages/forms/sample/form_sample_view.dart" rel="some text"><img height=360 width=240 style="margin: 10px;" src="./lib/pages/forms/sample/ss_form_sample.jpg"/></a>
 </div>
 
 A quickstart Flutter project, especially for Forms.
