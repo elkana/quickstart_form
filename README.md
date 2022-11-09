@@ -3,8 +3,11 @@
 
 <div align="center">
 
-<h4 align="center">Sample Form &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Home Screen &nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Side Drawer</h4>
-<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/bank.jpg"/>
+<h4 align="center">Informasi Data Bank &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Alamat Domisili &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Info Pekerjaan &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Personal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp Form Sample</h4>
+<a href="/pages/forms/onboarding/form_onboarding_bank_view.dart" rel="some text"><img height=460 width=240 style="margin: 10px;" src="./images/spyshot/bank.jpg"/></a>
+<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/alamat_domisili.jpg"/>
+<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/pekerjaan.jpg"/>
+<img height=460 width=240 style="margin: 10px;" src="./images/spyshot/personal.jpg"/>
 <img height=360 width=240 style="margin: 10px;" src="./lib/pages/forms/sample/ss_form_sample.jpg"/>
 </div>
 
