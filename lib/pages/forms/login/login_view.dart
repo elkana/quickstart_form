@@ -32,53 +32,43 @@ class LoginView extends GetView<LoginController> {
       body: Form(
               child: [
                 'Title'.text.xl4.bold.make(),
-                const SizedBox(height: 20),
                 // email
-                TextFormField(
+                MyTextFormField('Email',
                     controller: controller.ctrlUserId,
-                    textAlign: TextAlign.center,
-                    validator: controller.validateUserId,
-                    onSaved: (val) => controller.ctrlUserId.text = val!,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    autofocus: false,
-                    decoration: const InputDecoration(
-                        labelText: 'Email',
-                        suffixIcon: SizedBox(),
-                        contentPadding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0))),
+                    validator: (val) => controller.validateUserId(val!),
+                    onSaved: (val) => controller.ctrlUserId.text = val!),
                 //password
-                Obx(() => TextFormField(
-                    controller: controller.ctrlPwd,
-                    textAlign: TextAlign.center,
-                    validator: controller.validatePassword,
-                    onSaved: (val) => controller.ctrlPwd.text = val!,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    decoration: InputDecoration(
-                        labelText: 'Password',
-                        suffixIcon: IconButton(
-                            icon: Icon(controller.obscurePwd.isTrue
-                                ? Icons.visibility_off_outlined
-                                : Icons.visibility_outlined),
-                            onPressed: () => controller.obscurePwd.toggle()),
-                        contentPadding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0)),
-                    obscureText: controller.obscurePwd.value)),
+                Obx(() => MyTextFormField(
+                      'Password',
+                      controller: controller.ctrlPwd,
+                      validator: (val) => controller.validatePassword(val!),
+                      onSaved: (val) => controller.ctrlPwd.text = val!,
+                      obscureText: controller.obscurePwd.value,
+                      suffixIcon: IconButton(
+                          icon: Icon(
+                              controller.obscurePwd.isTrue ? Icons.visibility_off_outlined : Icons.visibility_outlined),
+                          onPressed: () => controller.obscurePwd.toggle()),
+                    )),
                 // toggle rememberme
-                Row(children: [
+                [
                   TextButton.icon(
-                      label: LocaleKeys.buttons_rememberme.tr.text.xs.make(),
-                      icon: Obx(() => Switch(
-                          value: controller.rememberPwd.value, onChanged: (val) => controller.rememberPwd.toggle())),
-                      onPressed: controller.rememberPwd.toggle),
+                    label: LocaleKeys.buttons_rememberme.tr.text.sm.make(),
+                    onPressed: controller.rememberPwd.toggle,
+                    icon: Obx(() => Switch(
+                        value: controller.rememberPwd.value, onChanged: (val) => controller.rememberPwd.toggle())),
+                  ),
                   const Spacer(),
-                  TextButton(child: 'Forgot Password'.text.xs.make(), onPressed: () => Get.toNamed(Routes.formResetPwd))
-                ]),
-                const SizedBox(height: 10.0),
+                  TextButton(child: 'Forgot Password'.text.sm.make(), onPressed: () => Get.toNamed(Routes.formResetPwd))
+                ].row(axisSize: MainAxisSize.max),
                 //button login
                 Obx(() => controller.loading.isTrue
                     ? const CircularProgressIndicator()
-                    : MyButton('Log in', onTap: controller.doLoginWithEmail).py16()),
-                const Spacer(),
+                    : MyButton('Log in', onTap: controller.doLoginWithEmail).marginOnly(top: 10)),
                 TextButton(
-                    child: 'New User ? Sign-up here'.text.xs.make(), onPressed: () => Get.toNamed(Routes.formSignUp))
+                    child: 'New User ? Sign up here'.text.sm.make(),
+                    onPressed: () => Get.toNamed(Routes.formSignUp)).marginOnly(top: 10),
+                const Spacer(),
+                'By signing in, you agree to our terms and conditions.'.text.sm.make()
               ].column(),
               autovalidateMode: AutovalidateMode.onUserInteraction,
               key: controller.formKey)

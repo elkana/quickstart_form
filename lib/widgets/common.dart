@@ -1,102 +1,40 @@
 import 'package:flutter/material.dart';
-
-class PaddingAll extends StatelessWidget {
-  final double gap;
-  final Widget? child;
-  const PaddingAll({Key? key, this.child, this.gap = 8}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => Padding(child: child, padding: EdgeInsets.all(gap));
-}
-
-class GapHorizontal extends StatelessWidget {
-  const GapHorizontal({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => const SizedBox(width: 20);
-}
-
-class GapVertical extends StatelessWidget {
-  const GapVertical({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => const SizedBox(height: 20);
-}
+import 'package:velocity_x/velocity_x.dart';
 
 class MyButton extends StatelessWidget {
   final String label;
-  final VoidCallback onTap;
-  const MyButton(this.label, {Key? key, required this.onTap}) : super(key: key);
+  final VoidCallback? onTap;
+  const MyButton(this.label, {Key? key, this.onTap}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Material(
-        child: MaterialButton(
-            child: Text(label, style: const TextStyle(color: Colors.white)),
-            onPressed: onTap,
-            minWidth: double.infinity,
-            height: 42.0),
-        borderRadius: BorderRadius.circular(10.0),
-        elevation: 5.0,
-        color: Colors.purple);
-  }
+  Widget build(BuildContext context) => Material(
+          child:
+              MaterialButton(child: label.text.white.make(), onPressed: onTap, minWidth: double.infinity, height: 42.0),
+          borderRadius: BorderRadius.circular(10.0),
+          elevation: 5.0,
+          color: Colors.purple)
+      .py16();
 }
 
-class MyTextField extends StatelessWidget {
-  final String? label;
-  final String? value;
-  final bool readonly;
-  final Color? color;
-  final int? maxLength;
-  final int? maxLines;
-  final TextAlign? textAlign;
-  final TextStyle? style;
-  final TextInputType? keyboardType;
-  final FocusNode? focusNode;
-  final bool hideFooter;
-  InputDecoration? decoration;
-  TextEditingController? controller;
-
-  MyTextField(
-      {Key? key,
-      this.controller,
-      this.label,
-      this.value,
-      this.readonly = true,
-      this.color,
-      this.maxLength,
-      this.maxLines,
-      this.style,
-      this.keyboardType,
-      this.focusNode,
-      this.decoration,
-      this.textAlign,
-      this.hideFooter = false})
-      : super(key: key) {
-    controller ??= TextEditingController(text: value ?? '-');
-    decoration ??= InputDecoration(
-        hintText: label,
-        hintMaxLines: 1,
-        labelText: label,
-        labelStyle: TextStyle(color: color),
-        contentPadding: const EdgeInsets.fromLTRB(10.0, 8.0, 10.0, 8.0),
-        border: readonly ? InputBorder.none : null,
-        counterText: hideFooter ? '' : null);
-  }
+class MyTextFormField extends StatelessWidget {
+  final TextEditingController? controller;
+  final String label;
+  final FormFieldSetter<String>? onSaved;
+  final FormFieldValidator<String>? validator;
+  final bool obscureText;
+  final Widget? suffixIcon;
+  const MyTextFormField(this.label,
+      {Key? key, this.controller, this.onSaved, this.validator, this.suffixIcon, this.obscureText = false})
+      : super(key: key);
 
   @override
-  Widget build(BuildContext context) => TextField(
-        focusNode: focusNode,
-        keyboardType: keyboardType ?? TextInputType.text,
-        autofocus: !readonly,
-        enabled: !readonly,
-        autocorrect: false,
-        enableSuggestions: false,
-        textAlign: textAlign ?? TextAlign.start,
-        // style: style ?? TextStyle(color: color, fontSize: ThemeUtil.font_size_textfield),
-        decoration: decoration,
-        controller: controller,
-        maxLines: maxLines,
-        maxLength: maxLength,
-      );
+  Widget build(BuildContext context) => TextFormField(
+      controller: controller,
+      textAlign: TextAlign.center,
+      validator: validator,
+      onSaved: onSaved,
+      style: const TextStyle(fontWeight: FontWeight.bold),
+      decoration: InputDecoration(
+          labelText: label, suffixIcon: suffixIcon, contentPadding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0)),
+      obscureText: obscureText);
 }
